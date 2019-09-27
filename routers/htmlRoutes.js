@@ -1,7 +1,7 @@
 const express = require("express");
 const routes = require('express').Router();
 const path = require("path");
-routes.use(express.static('/public'))
+routes.use(express.static('../api/public'))
 
 routes.get('/', (req, res) => {
     console.log("httproutes /");
