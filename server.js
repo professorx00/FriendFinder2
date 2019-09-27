@@ -1,15 +1,17 @@
 const express = require("express");
 const path = require("path");
-const routes = require('./app/routers/router.js');
+const routes = require('./routers/router.js');
 const app = express();
 const PORT = 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('/app/api/public'))
-app.use(express.static('/app/api/public/assets/imgs'))
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.use("/",routes);
+app.use("/public", function(){
+    console.log("public")
+})
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
