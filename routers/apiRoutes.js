@@ -49,11 +49,10 @@ routes.post('/addFriend', function (req, res) {
         const smallestFkey = filekeys[fkeyIndex];
         database.query("select * from surveys where filekey=?",[smallestFkey],function(err,results2){
             if(err) throw err;
-            // database.query("INSERT INTO `surveys` (`name`,`photo`,`answers`) VALUES (?,?,?)",[name,photo,question],function(err){
-            //     if(err) throw err;
-            //     res.send(results2[0]);
-            // })
-            res.send(results2[0]);
+            database.query("INSERT INTO `surveys` (`name`,`photo`,`answers`) VALUES (?,?,?)",[name,photo,question],function(err){
+                if(err) throw err;
+                res.send(results2[0]);
+            })
         })
     });
     

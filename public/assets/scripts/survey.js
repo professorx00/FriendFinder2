@@ -36,6 +36,7 @@ $(document).ready(function () {
             newDiv.append(char,charImg)
             $("#modalContent").append(newDiv)
             $('.modal').modal('open')
+            form.empty();
         });
     }
     
