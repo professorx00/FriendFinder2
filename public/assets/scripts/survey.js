@@ -1,8 +1,7 @@
 
 $(document).ready(function () {
     $('select').formSelect();
-    
-    
+    $('.modal').modal();    
     const form = $("#surveyForm");
     const name = $("#name");
     const photo = $("#photo");
@@ -28,12 +27,21 @@ $(document).ready(function () {
     };
     function addFriend(answers) {
         $.post('/api/addFriend', answers, function (res) {
-            console.log(res)
+            console.log(res.name)
+            console.log(res.photo)
+            console.log("friend found")
+            let newDiv = $("<div>")
+            let char = $("<h2>").text(res.name)
+            let charImg = $("<img>").attr("src",res.photo).addClass("modalImages")
+            newDiv.append(char,charImg)
+            $("#modalContent").append(newDiv)
+            $('.modal').modal('open')
         });
     }
     
     btn.on("click", function (event) {
         event.preventDefault()
+        console.log("click")
         allquestions = `${questionOne.val()},${questionTwo.val()},${questionThree.val()},${questionFour.val()},${questionFive.val()},${questionSix.val()},${questionSeven.val()},${questionEight.val()},${questionNine.val()},${questionTen.val()}`
         let test = combineAnswers(allquestions)
         addFriend(test)

@@ -10,151 +10,173 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/survey.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
-<body>
-    <form id="surveyForm">
-        <label>
-            <h1>Name:</h1>
-        </label>
-        <input id="name"></input>
-        <label>
-            <h1>Photo Link:</h1>
-        </label>
-        <input id="photo"></input>
+<body class="black">
+    <div class="container">
+            <div id="modal1" class="modal">
+                <div class="modal-content" id="modalContent">
+                      <h4>The Character Your close too is:</h4>
+                      
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+            </div>
+        <div class="row" id="header">
+            <div class="col s12 m6 tileCont">
+                <h1>Wubbalubbadubdub! Survey:</h1>
+            </div>
+            <div class="col s12 m6 tileCont">
+                <img src="./assets/imgs/Rick_and_Morty.png" alt="Rick-Morty" id="title">
+            </div>
+        </div>
+        <div class="row" id="surveyContainer">
+            <form class="col s12" id="surveyForm">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">add_a_photo</i>
+                        <input id="photo" type="url" class="validate">
+                        <label for="photo">Enter Your URL for Photo</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">EX:
+                            http(s)://www.google.com/..</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12">
 
-        <div class="formgroup">
-            <label>
-                <h1>Question 1:</h1>Your mind is always buzzing with unexplored ideas and plans.
-            </label>
-            <select id="questionOne">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 white-text">
+                        <select id="questionOne">
+                            <option value="" disabled selected>You think you're a good person.</option>
+                            <option value="1">1(Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5(Strongly Agree)</option>
+                        </select>
+                        <label>Question 1:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionTwo">
+                            <option value="" disabled selected>You feel superior to other people.</option>
+                            <option value="1">1(Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5(Strongly Agree)</option>
+                        </select>
+                        <label>Question 2:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionThree">
+                            <option value="" disabled selected>It is good to be busy with more joyful things during troubled times?</option>
+                            <option value="1">I drink to much</option>
+                            <option value="2">I'm easily influenced by others</option>
+                            <option value="3">I can be insecure at times</option>
+                            <option value="4">I tend to give up on things too easily</option>
+                            <option value="5">I'm a morty and nothing matters</option>
+                        </select>
+                        <label>Question 3:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionFour">
+                            <option value="" disabled selected>What's your favorite vegetable?</option>
+                            <option value="1">Pickles</option>
+                            <option value="2">Carrot</option>
+                            <option value="3">Mega Tree Fruit</option>
+                            <option value="4">Screw Vegetables give me butter</option>
+                            <option value="5">this question makes you contemplate your life</option>
+                        </select>
+                        <label>Question 4:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionFive">
+                            <option value="" disabled selected>If you could be in a band, what would you play?</option>
+                            <option value="1">Guitar</option>
+                            <option value="2">Drum</option>
+                            <option value="3">Singer</option>
+                            <option value="4">Keyboard</option>
+                            <option value="5">Bass</option>
+                        </select>
+                        <label>Question 5:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionSix">
+                            <option value="" disabled selected>What could you not live without?</option>
+                            <option value="1">Your Morty</option>
+                            <option value="2">Butter Passing Robot</option>
+                            <option value="3">Sonic Screw Driver</option>
+                            <option value="4">Portal Gun</option>
+                            <option value="5">Money</option>
+                        </select>
+                        <label>Question 6:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionSeven">
+                            <option value="" disabled selected>Pick a Color?</option>
+                            <option value="1">Red</option>
+                            <option value="2">Black</option>
+                            <option value="3">Glowing Green</option>
+                            <option value="4">Purple</option>
+                            <option value="5">Yellow</option>
+                        </select>
+                        <label>Question 7:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionEight">
+                            <option value="" disabled selected>What do you dream of?</option>
+                            <option value="1">Sheep</option>
+                            <option value="2">Tinkles</option>
+                            <option value="3">Pencilvester</option>
+                            <option value="4">Cthullu</option>
+                            <option value="5">Dogs</option>
+                        </select>
+                        <label>Question 8:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionNine">
+                            <option value="" disabled selected>Which Location would you visit?</option>
+                            <option value="1">C-132</option>
+                            <option value="2">Froopyland</option>
+                            <option value="3">C-137</option>
+                            <option value="4">Alphabetrium</option>
+                            <option value="5">Purge Planet</option>
+                        </select>
+                        <label>Question 9:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="questionTen">
+                            <option value="" disabled selected>What item would you want?</option>
+                            <option value="1">Interdimensional Cable</option>
+                            <option value="2">Microverse Battery</option>
+                            <option value="3">Mr. Meeseeks Box</option>
+                            <option value="4">Gwendolyn</option>
+                            <option value="5">Butter Robot</option>
+                        </select>
+                        <label>Question 10:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn-large  light-green accent-3" id="formSubmit">Submit</button>
+                </div>
+            </form>
         </div>
-        <div class="formgroup">
-            <label>
-                <h1>Question 2:</h1>Generally speaking, you rely more on your experience than your imagination.
-            </label>
-            <select id="questionTwo">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-        <div class="formgroup">
-            <label>
-                <h1>Question 3:</h1>You find it easy to stay relaxed and focused even when there is some pressure.
-            </label>
-            <select id="questionThree">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-        <div class="formgroup">
-            <label>
-                <h1>Question 4:</h1>You rarely do something just out of sheer curiosity.
-            </label>
-            <select id="questionFour">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-        <div class="formgroup">
-            <label>
-                <h1>Question 5:</h1>People can rarely upset you.
-            </label>
-            <select id="questionFive">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+    </div>
 
-        <div class="formgroup">
-            <label>
-                <h1>Question 6:</h1>It is often difficult for you to relate to other people’s feelings.
-            </label>
-            <select id="questionSix">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-
-        <div class="formgroup">
-            <label>
-                <h1>Question 7:</h1>In a discussion, truth should be more important than people’s sensitivities.
-            </label>
-            <select id="questionSeven">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-        <div class="formgroup">
-            <label>
-                <h1>Question 8:</h1>You rarely get carried away by fantasies and ideas.
-            </label>
-            <select id="questionEight">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-        <div class="formgroup">
-            <label>
-                <h1>Question 9:</h1>You think that everyone’s views should be respected regardless of whether they are
-                supported by facts or not.
-            </label>
-            <select id="questionNine">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-        <div class="formgroup">
-            <label>
-                <h1>Question 10:</h1>You feel more energetic after spending time with a group of people.
-            </label>
-            <select id="questionTen">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-        <div class="formgroup">
-            <button id="formSubmit">Submit</button>
-        </div>
-    </form>
-
-    <script src="../public/assets/scripts/survey.js"></script>
+    <script src="/assets/scripts/survey.js"></script>
 </body>
 
 </html>

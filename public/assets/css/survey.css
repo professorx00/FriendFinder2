@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Freckle+Face&display=swap');
+*{
+    color: white;
+    font-family: 'Freckle Face', cursive;
+    letter-spacing: .2rem;
+}
+#title{
+    width:50%;
+    padding:0;
+    margin: 0;
+}
+#surveyContainer{
+    border-top: white solid 2px;
+}
+#header{
+    margin:0;
+    padding-bottom:0;
+}
+#formSubmit{
+    font-family: 'Freckle Face', cursive;
+    font-size: 3rem;
+}
+.dropdown-content,.dropdown-trigger{
+    font-family: 'Freckle Face', cursive;
+    font-size: 1.4rem !important;
+    color:white;
+}
+.dropdown-content{
+    background-color: black;
+    color: white;
+}
+span{
+    color: white;
+}
+#modalContent{
+    background: black;
+}
+.modalImages{
+    width: 250px;
+}
