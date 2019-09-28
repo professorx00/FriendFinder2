@@ -1,6 +1,7 @@
 const routes = require('express').Router();
 const mysql = require('mysql');
 
+
 var database = mysql.createConnection({
     host: "localhost",
     port: 3306,
@@ -18,7 +19,6 @@ console.log("apiRoutes")
 
 routes.post('/addFriend', function (req, res) {
     let answers = req.body;
-    console.log(answers)
     let name = answers.name;
     let photo = answers.photo;
     let question = answers.questions

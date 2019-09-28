@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Freckle+Face&display=swap');
-
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 #bball{
     background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 51%, rgba(148,147,152,1) 52%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(148,147,152,1) 26%);
 }
 
-#survey,#button{
+#survey{
     margin-top:25%;
     font-family: 'Freckle Face', cursive;
     font-size: 3rem;
-
+    height:100%;
 }
+
+
