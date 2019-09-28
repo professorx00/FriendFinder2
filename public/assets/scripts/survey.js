@@ -16,6 +16,7 @@ $(document).ready(function () {
     const questionNine = $("#questionNine");
     const questionTen = $("#questionTen");
     const btn = $("#formSubmit");
+    const resetBtn = $("#close");
     let allquestions = []
     function combineAnswers(answers) {
         return {
@@ -27,6 +28,7 @@ $(document).ready(function () {
     };
     function addFriend(answers) {
         $.post('/api/addFriend', answers, function (res) {
+            $("#modalContent").empty
             console.log(res.name)
             console.log(res.photo)
             console.log("friend found")
@@ -36,7 +38,10 @@ $(document).ready(function () {
             newDiv.append(char,charImg)
             $("#modalContent").append(newDiv)
             $('.modal').modal('open')
-            form.empty();
+            $("#rest").on("click",function(event){
+                event.preventDefault();
+                $('#surveyForm').trigger("reset");
+            })
         });
     }
     
@@ -47,7 +52,5 @@ $(document).ready(function () {
         let test = combineAnswers(allquestions)
         addFriend(test)
     })
-
-
 
 });

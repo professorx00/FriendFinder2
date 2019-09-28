@@ -1,13 +1,13 @@
 const routes = require('express').Router();
 const mysql = require('mysql');
-
+require('dotenv').config()
 
 var database = mysql.createConnection({
-    host: "localhost",
+    host: process.env.host,
     port: 3306,
-    user: "root",
-    password: "root",
-    database: "friendfinder"
+    user: process.env.user,
+    password: process.env.pass,
+    database: process.env.database
 });
 
 database.connect(function (err) {
@@ -51,8 +51,10 @@ routes.post('/addFriend', function (req, res) {
             if(err) throw err;
             database.query("INSERT INTO `surveys` (`name`,`photo`,`answers`) VALUES (?,?,?)",[name,photo,question],function(err){
                 if(err) throw err;
-                res.send(results2[0]);
+                console.log(results2[0])
+                res.send(results2[0]).end();
             })
+            
         })
     });
     
