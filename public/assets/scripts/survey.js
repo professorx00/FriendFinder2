@@ -25,7 +25,8 @@ $(document).ready(function () {
         }
         if(formValid){
             let allquestions = `${questionOne.val()},${questionTwo.val()},${questionThree.val()},${questionFour.val()},${questionFive.val()},${questionSix.val()},${questionSeven.val()},${questionEight.val()},${questionNine.val()},${questionTen.val()}`
-            // addFriend(combineAnswers(allquestions))
+            addFriend(combineAnswers(allquestions))
+            $("#error").empty()
             console.log("Passed")
         }
         else{
