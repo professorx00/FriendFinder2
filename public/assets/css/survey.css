@@ -40,6 +40,9 @@
 span{
     color: white;
 }
+#error{
+    color:red;
+}
 #modalContent{
     background: black;
 }

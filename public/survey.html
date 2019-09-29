@@ -37,6 +37,7 @@
             </div>
         </div>
         <div class="row" id="surveyContainer" class="clearfix">
+            
             <form class="col s12" id="surveyForm">
                 <div class="row">
                     <div class="input-field col s12 m6">
@@ -60,7 +61,7 @@
                 <div class="row">
                     <div class="input-field col s12 white-text">
                         <select id="questionOne">
-                            <option value="" disabled selected>You think you're a good person.</option>
+                            <option value="100" disabled selected>You think you're a good person.</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -82,7 +83,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionThree">
-                            <option value="" disabled selected>It is good to be busy with more joyful things during troubled times?</option>
+                            <option value="100" disabled selected>It is good to be busy with more joyful things during troubled times?</option>
                             <option value="1">I drink to much</option>
                             <option value="2">I'm easily influenced by others</option>
                             <option value="3">I can be insecure at times</option>
@@ -93,7 +94,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionFour">
-                            <option value="" disabled selected>What's your favorite vegetable?</option>
+                            <option value="100" disabled selected>What's your favorite vegetable?</option>
                             <option value="1">Pickles</option>
                             <option value="2">Carrot</option>
                             <option value="3">Mega Tree Fruit</option>
@@ -104,7 +105,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionFive">
-                            <option value="" disabled selected>If you could be in a band, what would you play?</option>
+                            <option value="100" disabled selected>If you could be in a band, what would you play?</option>
                             <option value="1">Guitar</option>
                             <option value="2">Drum</option>
                             <option value="3">Singer</option>
@@ -115,7 +116,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionSix">
-                            <option value="" disabled selected>What could you not live without?</option>
+                            <option value="100" disabled selected>What could you not live without?</option>
                             <option value="1">Your Morty</option>
                             <option value="2">Butter Passing Robot</option>
                             <option value="3">Sonic Screw Driver</option>
@@ -126,7 +127,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionSeven">
-                            <option value="" disabled selected>Pick a Color?</option>
+                            <option value="100" disabled selected>Pick a Color?</option>
                             <option value="1">Red</option>
                             <option value="2">Black</option>
                             <option value="3">Glowing Green</option>
@@ -137,7 +138,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionEight">
-                            <option value="" disabled selected>What do you dream of?</option>
+                            <option value="100" disabled selected>What do you dream of?</option>
                             <option value="1">Sheep</option>
                             <option value="2">Tinkles</option>
                             <option value="3">Pencilvester</option>
@@ -148,7 +149,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionNine">
-                            <option value="" disabled selected>Which Location would you visit?</option>
+                            <option value="100" disabled selected>Which Location would you visit?</option>
                             <option value="1">C-132</option>
                             <option value="2">Froopyland</option>
                             <option value="3">C-137</option>
@@ -159,7 +160,7 @@
                     </div>
                     <div class="input-field col s12">
                         <select id="questionTen">
-                            <option value="" disabled selected>What item would you want?</option>
+                            <option value="100" disabled selected>What item would you want?</option>
                             <option value="1">Interdimensional Cable</option>
                             <option value="2">Microverse Battery</option>
                             <option value="3">Mr. Meeseeks Box</option>
@@ -171,6 +172,7 @@
                 </div>
                 <div class="row">
                     <button class="btn-large  light-green accent-3" id="formSubmit">Submit</button>
+                    <h5 id="error"></h5>
                 </div>
             </form>
         </div>
